@@ -33,6 +33,15 @@ public class SensorReading {
 	private Double humidity;
 	private Instant createdDate;
 	
+	public SensorReading(int id, Sensor sensor, Double temperature, Double humidity) {
+		super();
+		this.id = id;
+		this.sensor= sensor;
+		this.temperature = temperature;
+		this.humidity = humidity;
+	}
+
+
 	public int getId() {
 		return id;
 	}

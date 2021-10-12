@@ -13,9 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import com.sensor.api.main.entity.Sensor;
-import com.sensor.api.main.repo.SensorReadingRepo;
 import com.sensor.api.main.repo.SensorRepo;
-import com.sensor.api.main.service.SensorReadingService;
 import com.sensor.api.main.service.SensorService;
 
 @SpringBootTest
@@ -23,12 +21,8 @@ class SensorGroupApplicationTests {
 	
 	@Autowired
 	private SensorService sensorService;
-	@Autowired
-	private SensorReadingService sensorReadingService;
 	@MockBean
 	private SensorRepo sensorRepo;
-	@MockBean
-	private SensorReadingRepo sensorReadingRepo;
 	@Test
 	void contextLoads() {
 	}
@@ -54,6 +48,5 @@ class SensorGroupApplicationTests {
 		assertEquals(3, sensorService.getSensorList().size());
 
 	}
-	
 	
 }
